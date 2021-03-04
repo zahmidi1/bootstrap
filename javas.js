@@ -5,23 +5,20 @@ $('.collapse').slideToggle()
 })
 
 
-  function send(event) {
-      event.preventDefault();           
-      Email.send({
-        name:document.getElementById('name').value,    
+  
+      
+    Email.send({
+        SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
         Host : "smtp.gmail.com",
-        Username : "abderahman.zahmidi.solicode@gmail.com",
-        Password : "abdelZ1997",
-        To : "type u'r email id",
-        From : document.getElementById('email').value,
-        Subject : document.getElementById('subject').value,
-        Body : document.getElementById('message').value
-        }).then(function(response){ 
-         if (response == 'OK') {              
-             alert("Mail sent succeessfully");
-          } else {
-              throw new Error("Error: " + response.statusText);
-          } 
-       });
+        Username : "zahmidi",
+       
+        To : 'abderahman.zahmidi.solicode@gmail.com',
+        From : "abderahmanzahmidi@gmail.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+       alert("oky")
+    );
 
-  }    
+ 
+  
