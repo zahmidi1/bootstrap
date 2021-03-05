@@ -4,7 +4,7 @@ $('.collapse').slideToggle()
     });
 })
 
-AOS.init();
+
  
 
      Email.send({
