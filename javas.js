@@ -5,20 +5,21 @@ $('.collapse').slideToggle()
 })
 
 
-  
-      
-    Email.send({
+ 
+
+     Email.send({
         SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
         Host : "smtp.gmail.com",
-        Username : "zahmidi",
+        Username : "abderahmanzahmidi@gmail.com",
        
         To : 'abderahman.zahmidi.solicode@gmail.com',
-        From : "abderahmanzahmidi@gmail.com",
-        Subject : "This is the subject",
-        Body : "And this is the body"
-    }).then(
-       alert("oky")
-    );
+        From : Inputs.elements["email"].valus,
+        Subject : Inputs.elements["subject"].valus,
+        Body : Inputs.elements["message"].valus,
+    }).then(msg => alert("oky"));
+
+
+   
 
  
   
